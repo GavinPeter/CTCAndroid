@@ -344,7 +344,8 @@ function showstore( li ){
 
 		iconappend = '<li>'+ cat + '</a></li>';
 
-	var html = '<h2>'+ li.find("h2").text() + '</h2>'+
+	var html ='<h2>'+ storeName+' '+ '<a onclick=\'window.open("https://www.google.com/#q='+
+		storeName +'", "_system")\' class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">Search</a></h2>'+
 		'<ul data-role="listview" data-inset="true" id="storelistview" >'+
 		iconappend +
 		'<li class="ui-nodisc-icon ui-alt-icon" data-icon="heart" id="fav"><a href="#" onclick="addfav(\''
