@@ -360,6 +360,11 @@ function showstore( li ){
 			+'<ul data-role="listview" data-inset="true" id="commentlist"></ul>'
 			+'<script src="js/jquery.rateit.min.js"></script>';
 
+		//chagne share href
+		var details =  li.attr("cat") + " "+ storeName + " " + li.attr("phone") +" " + li.attr("addr");
+
+		$("a#share").attr( "onclick", "window.plugins.socialsharing.share('" + details + "')" );
+			
 		$('#store_content').html(html);
 	
 		$.mobile.changePage( '#store', { transition: "slideup" });
